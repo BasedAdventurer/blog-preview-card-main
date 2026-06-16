@@ -3,6 +3,7 @@
     --white: hsl(0, 0%, 100%);
     --gray-500: hsl(0, 0%, 42%);
     --gray-950: hsl(0, 0%, 7%);
+    --shadow-1: 10px 10px 0px 0px rgba(0,0,0,1);
 }
 
 *, 
@@ -16,7 +17,7 @@
 body {
     background-color: var(--yellow);
     min-height: 100vh;
-    font-family: 'Figtree';
+    font-family: 'Figtree', sans-serif;
     font-weight: 500;
     display: flex;
     flex-direction: column;
@@ -33,10 +34,10 @@ main {
 
 .blog-preview__card {
     background-color: var(--white);
-    padding: 20px;
+    padding: 1.25rem;
     border-radius: 20px;
     border: 1px solid black;
-    box-shadow: 10px 10px 0px 0px rgba(0,0,0,1);
+    box-shadow: var(--shadow-1);
     transition: all 200ms ease;
 }
 
@@ -97,7 +98,7 @@ main {
 }
 
 .blog__desc {
-    font-size: 0.990;
+    font-size: 0.990rem;
     line-height: 1.5;
     color: var(--gray-500);
     margin-block-end: 8px;
@@ -112,7 +113,7 @@ main {
 
 .blog-publisher span {
     font-size: 0.9rem;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .blog-publisher .img__wrapper {
@@ -122,6 +123,16 @@ main {
 .blog-publisher .img__wrapper img {
     width: 30px;
     height: 30px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .blog-preview__card {
+        transition: none;
+    }
+
+    .blog-preview__card:hover {
+        transform: none; 
+    }
 }
 
 

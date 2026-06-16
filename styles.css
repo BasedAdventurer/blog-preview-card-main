@@ -35,7 +35,6 @@ main {
 
 .blog-preview__card {
     background-color: var(--white);
-    padding: 1.25rem;
     padding: clamp(1rem, 3vw, 1.25rem);
     border-radius: 20px;
     border: 1px solid black;

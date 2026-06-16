@@ -1,6 +1,7 @@
 :root {
     --yellow: hsl(47, 88%, 63%);
     --white: hsl(0, 0%, 100%);
+    --blue: hsl(228, 45%, 44%);
     --gray-500: hsl(0, 0%, 42%);
     --gray-950: hsl(0, 0%, 7%);
     --shadow-1: 10px 10px 0px 0px rgba(0,0,0,1);
@@ -35,10 +36,12 @@ main {
 .blog-preview__card {
     background-color: var(--white);
     padding: 1.25rem;
+    padding: clamp(1rem, 3vw, 1.25rem);
     border-radius: 20px;
     border: 1px solid black;
     box-shadow: var(--shadow-1);
     transition: all 200ms ease;
+    width: clamp(280px, 50%, 600px);
 }
 
 .blog-preview__card:hover {
@@ -46,7 +49,7 @@ main {
 }
 
 .container {
-    max-width: 320px;
+    /* max-width: 320px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -123,6 +126,15 @@ main {
 .blog-publisher .img__wrapper img {
     width: 30px;
     height: 30px;
+}
+
+.attribution { 
+    font-size: 0.6875rem; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: var(--blue); 
 }
 
 @media (prefers-reduced-motion: reduce) {
